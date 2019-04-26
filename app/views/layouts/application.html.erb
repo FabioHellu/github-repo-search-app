@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
-    <title>GithubRepoSearchApp</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="language" content="pt-BR" />
+    <meta http-equiv="Content-Language" content="pt-BR" />
+
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="imagetoolbar" content="no" />
+
+    <meta name="robots" content="noindex,nofollow" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <title>GitHub Repositories Search APP</title>
+
+    <meta name="description" content="GitHub Repositories Search APP" />
+    <meta name="keywords" content="" />
+
+    <!--[if IE]><link rel="shortcut icon" href="/favicon.ico" /><![endif]-->
+    <link rel="icon" href="/favicon.png" />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand mr-auto mr-lg-0" href="<%= root_url %>">GitHub Repositories Search APP</a>
+      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <main role="main" class="container pt-4">
+
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %> mt-5"><%= value %></div>
+      <%- end %>
+
+      <%= yield %>
+
+    </main>
   </body>
 </html>

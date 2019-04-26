@@ -1,0 +1,8 @@
+en:
+  enumerize:
+    languages:
+      ruby:   'Ruby'
+      php:    'PHP'
+      java:   'Java'
+      go:     'GO'
+      python: 'Python'
