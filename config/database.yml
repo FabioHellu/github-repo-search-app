@@ -18,4 +18,4 @@ test:
 
 production:
   <<: *default
-  database: ghb_repo_search
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
