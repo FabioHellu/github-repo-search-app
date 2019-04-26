@@ -4,16 +4,14 @@
 module RepositoriesHelper
   def get_badge_color(position)
     case position
-    when 1..3
+    when 1
       'success'
-    when 4..6
+    when 2..3
       'primary'
-    when 7..10
+    when 4..6
       'info'
-    when 11..30
-      'secondary'
     else
-      'light'
+      'secondary'
     end
   end
 end
