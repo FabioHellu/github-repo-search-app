@@ -11,6 +11,9 @@ Para configurar o Access Token do GitHub, adicione o arquivo `config/local_env.y
 ```yaml
 
 GITHUB_ACCESS_TOKEN: 'TOKEN'
+DB_HOST: 'localhost'
+DB_USERNAME: 'root'
+DB_PASSWORD: 'root'
 
 ```
 
