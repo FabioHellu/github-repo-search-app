@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2019_04_25_222100) do
     t.integer "language", limit: 1, null: false
     t.string "name", null: false
     t.string "full_name", null: false
-    t.text "description", limit: 16777215
-    t.text "url", limit: 16777215, null: false
+    t.text "description"
+    t.text "url", null: false
     t.string "owner_login", null: false
-    t.text "owner_avatar_url", limit: 16777215
+    t.text "owner_avatar_url"
     t.bigint "forks", null: false
     t.bigint "open_issues", null: false
     t.bigint "stargazers_count", null: false

@@ -2,7 +2,7 @@
 
 # Repository Model
 class Repository < ApplicationRecord
-  MAX_REPOSITORIES = 10
+  MAX_REPOSITORIES = 50
 
   include LanguagesEnum
 
@@ -24,7 +24,7 @@ class Repository < ApplicationRecord
     client = Octokit::Client.new
 
     query   = "language:#{language}"
-    options = { sort: 'stars', order: 'desc', per_page: (MAX_REPOSITORIES + 5) }
+    options = { sort: 'stars', order: 'desc', per_page: (MAX_REPOSITORIES + 20) }
 
     repos = client.search_repositories(query, options)
 
